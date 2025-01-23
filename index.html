@@ -110,8 +110,23 @@ body {
     </section>
 
     <footer class="text-center text-sm text-gray-500 mt-8">
-      © 2025 All rights reserved.
+      © <span id=¨current-year¨></span> All rights reserved.
+      
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const currentYear = new Date().getFullYear();
+    
+    const yearElement = document.getElementById('current-year');
+    
+    if (yearElement) {
+        yearElement.textContent = currentYear;
+    } else {
+        console.warn('Element with ID "current-year" not found');
+    }
+});
+</script>
+    
   </div>
 </body>
 </html>
